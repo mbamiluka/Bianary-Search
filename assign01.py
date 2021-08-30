@@ -1,5 +1,5 @@
 """
-Assign 01 - <INSERT YOUR NAME HERE>
+Assign 01 - MBAMI LUKA
 
 Directions:
     * Complete the linearSearch and binarySearch functions that have been
