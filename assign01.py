@@ -17,10 +17,28 @@ def linearSearch(list_of_items, item_sought):
 
     num_comparisons = 0
     item_found = False
+    first = list_of_items[0]
+    last = list_of_items[len(list_of_items) - 1]
     start_time = time.time()
 
     # INSERT YOUR LINEAR SEARCH CODE HERE, MODIFYING
     # num_comparisons and item_found AS NEEDED
+    if item_sought < first:
+        num_comparisons += 1
+        elapsed_time = time.time() - start_time
+        return (item_found, num_comparisons, elapsed_time)
+
+    if item_sought > last:
+        num_comparisons += 1
+        elapsed_time = time.time() - start_time
+        return (item_found, num_comparisons, elapsed_time)
+
+    for item in list_of_items:
+        if item == item_sought:
+            item_found = True
+            elapsed_time = time.time() - start_time
+            return (item_found, num_comparisons, elapsed_time)
+        num_comparisons += 1
 
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
@@ -30,10 +48,35 @@ def binarySearch(list_of_items, item_sought):
 
     num_comparisons = 0
     item_found = False
+    first = 0
+    last = len(list_of_items) - 1
     start_time = time.time()
 
     # INSERT YOUR BINARY SEARCH CODE HERE, MODIFYING
     # num_comparisons and item_found AS NEEDED
+    if item_sought < list_of_items[0]:
+        num_comparisons += 1
+        elapsed_time = time.time() - start_time
+        return (item_found, num_comparisons, elapsed_time)
+
+    if item_sought > list_of_items[len(list_of_items) - 1]:
+        num_comparisons += 1
+        elapsed_time = time.time() - start_time
+        return (item_found, num_comparisons, elapsed_time)
+
+    while first <= last:
+      mid = (first + last) // 2
+
+      if list_of_items[mid] == item_sought:
+        item_found = True
+        num_comparisons += 1
+        elapsed_time = time.time() - start_time
+        return (item_found, num_comparisons, elapsed_time)
+      
+      elif list_of_items[mid] < item_sought:
+        first = mid+1
+
+      else: last = mid - 1
 
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
