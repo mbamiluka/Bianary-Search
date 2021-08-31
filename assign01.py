@@ -12,6 +12,7 @@ Directions:
 
 import time
 
+#======================================================================
 
 def linearSearch(list_of_items, item_sought):
 
@@ -42,7 +43,7 @@ def linearSearch(list_of_items, item_sought):
 
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
-
+#======================================================================
 
 def binarySearch(list_of_items, item_sought):
 
@@ -52,8 +53,6 @@ def binarySearch(list_of_items, item_sought):
     last = len(list_of_items) - 1
     start_time = time.time()
 
-    # INSERT YOUR BINARY SEARCH CODE HERE, MODIFYING
-    # num_comparisons and item_found AS NEEDED
     if item_sought < list_of_items[0]:
         num_comparisons += 1
         elapsed_time = time.time() - start_time
@@ -78,9 +77,11 @@ def binarySearch(list_of_items, item_sought):
 
       else: last = mid - 1
 
+      num_comparisons += 1
+
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
-
+#======================================================================
 
 def assign01_main():
     """ A 'main' function to be run when our program is run standalone """
