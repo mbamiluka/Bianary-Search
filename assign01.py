@@ -77,7 +77,7 @@ def binarySearch(list_of_items, item_sought):
         return (item_found, num_comparisons, elapsed_time)
       
       elif list_of_items[mid] < item_sought:
-        first = mid+1
+        first = mid + 1
 
       else: last = mid - 1
 
@@ -89,7 +89,6 @@ def binarySearch(list_of_items, item_sought):
 
 def assign01_main():
     """ A 'main' function to be run when our program is run standalone """
-
     # a sorted list of ~20 items
     list1 = [2, 3, 6, 10, 11, 17, 20, 23, 24, 29, 31, 34, 38, 39, 42, 47, 53]
     item_to_find = 34
