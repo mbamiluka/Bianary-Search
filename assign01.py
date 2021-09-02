@@ -22,8 +22,6 @@ def linearSearch(list_of_items, item_sought):
     last = list_of_items[len(list_of_items) - 1]
     start_time = time.time()
 
-    # INSERT YOUR LINEAR SEARCH CODE HERE, MODIFYING
-    # num_comparisons and item_found AS NEEDED
     if item_sought < first:
         num_comparisons += 1
         elapsed_time = time.time() - start_time
