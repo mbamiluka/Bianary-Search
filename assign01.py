@@ -21,16 +21,6 @@ def linearSearch(list_of_items, item_sought):
     last = list_of_items[len(list_of_items) - 1]
     start_time = time.time()
 
-    if item_sought < first:
-        num_comparisons += 1
-        elapsed_time = time.time() - start_time
-        return (item_found, num_comparisons, elapsed_time)
-
-    if item_sought > last:
-        num_comparisons += 1
-        elapsed_time = time.time() - start_time
-        return (item_found, num_comparisons, elapsed_time)
-
     for item in list_of_items:
         if item == item_sought:
             item_found = True
@@ -50,16 +40,6 @@ def binarySearch(list_of_items, item_sought):
     first = 0
     last = len(list_of_items) - 1
     start_time = time.time()
-
-    if item_sought < list_of_items[0]:
-        num_comparisons += 1
-        elapsed_time = time.time() - start_time
-        return (item_found, num_comparisons, elapsed_time)
-
-    if item_sought > list_of_items[len(list_of_items) - 1]:
-        num_comparisons += 1
-        elapsed_time = time.time() - start_time
-        return (item_found, num_comparisons, elapsed_time)
 
     while first <= last:
       mid = (first + last) // 2
