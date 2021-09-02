@@ -17,8 +17,6 @@ def linearSearch(list_of_items, item_sought):
     """Linear Search"""
     num_comparisons = 0
     item_found = False
-    first = list_of_items[0]
-    last = list_of_items[len(list_of_items) - 1]
     start_time = time.time()
 
     for item in list_of_items:
