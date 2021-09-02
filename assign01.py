@@ -10,7 +10,7 @@ Directions:
       Your program will not pass the tests if this is not done!
 """
 import time
-#======================================================================
+# =====================================================================
 
 
 def linearSearch(list_of_items, item_sought):
@@ -40,7 +40,7 @@ def linearSearch(list_of_items, item_sought):
 
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
-#======================================================================
+# =====================================================================
 
 
 def binarySearch(list_of_items, item_sought):
@@ -79,7 +79,7 @@ def binarySearch(list_of_items, item_sought):
 
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
-#======================================================================
+# =====================================================================
 
 
 def assign01_main():
