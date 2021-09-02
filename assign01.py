@@ -71,7 +71,8 @@ def binarySearch(list_of_items, item_sought):
         return (item_found, num_comparisons, elapsed_time)
       elif list_of_items[mid] < item_sought:
         first = mid + 1
-      else: last = mid - 1
+      else:
+        last = mid - 1
       num_comparisons += 1
 
     elapsed_time = time.time() - start_time
