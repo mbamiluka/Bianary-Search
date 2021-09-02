@@ -23,6 +23,7 @@ def linearSearch(list_of_items, item_sought):
         if item == item_sought:
             item_found = True
             elapsed_time = time.time() - start_time
+            num_comparisons += 1
             return (item_found, num_comparisons, elapsed_time)
         num_comparisons += 1
 
