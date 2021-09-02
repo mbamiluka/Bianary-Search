@@ -14,8 +14,11 @@ import time
 
 #======================================================================
 
-def linearSearch(list_of_items, item_sought):
 
+def linearSearch(list_of_items, item_sought):
+    """
+    Linear Search
+    """
     num_comparisons = 0
     item_found = False
     first = list_of_items[0]
@@ -43,8 +46,11 @@ def linearSearch(list_of_items, item_sought):
     return (item_found, num_comparisons, elapsed_time)
 #======================================================================
 
-def binarySearch(list_of_items, item_sought):
 
+def binarySearch(list_of_items, item_sought):
+    """
+    Binary Search
+    """
     num_comparisons = 0
     item_found = False
     first = 0
