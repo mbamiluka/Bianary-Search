@@ -9,16 +9,12 @@ Directions:
       coding style is followed (e.g. blank lines between functions).
       Your program will not pass the tests if this is not done!
 """
-
 import time
-
 #======================================================================
 
 
 def linearSearch(list_of_items, item_sought):
-    """
-    Linear Search
-    """
+    """Linear Search"""
     num_comparisons = 0
     item_found = False
     first = list_of_items[0]
@@ -48,9 +44,7 @@ def linearSearch(list_of_items, item_sought):
 
 
 def binarySearch(list_of_items, item_sought):
-    """
-    Binary Search
-    """
+    """Binary Search"""
     num_comparisons = 0
     item_found = False
     first = 0
@@ -86,6 +80,7 @@ def binarySearch(list_of_items, item_sought):
     elapsed_time = time.time() - start_time
     return (item_found, num_comparisons, elapsed_time)
 #======================================================================
+
 
 def assign01_main():
     """ A 'main' function to be run when our program is run standalone """
